@@ -11,10 +11,10 @@ let tests =
         // For example, Customer A chooses 'Every day'. Customer B chooses 'On the 10th of the
         // month'. Customer C chooses ‘On Tuesday and Friday’.
         let customerA = { Name = CustomerName "A"; MarketingPreference = EveryDay }
-        let customerB = { Name = CustomerName "B"; MarketingPreference = DayOfTheMonth 10 }
+        let customerB = { Name = CustomerName "B"; MarketingPreference = DayOfTheMonth (DayOfMonth.create 10) }
         let customerC =
             { Name = CustomerName "C"
-              MarketingPreference = DayOfTheWeek [ DayOfWeek.Tuesday; DayOfWeek.Friday ] }
+              MarketingPreference = DayOfTheWeek (Set [ DayOfWeek.Tuesday; DayOfWeek.Friday ]) }
 
         let result = customersToContactInNextNintyDays (DateTime(2018, 04, 01))
                                                         (Set [customerA; customerB; customerC])

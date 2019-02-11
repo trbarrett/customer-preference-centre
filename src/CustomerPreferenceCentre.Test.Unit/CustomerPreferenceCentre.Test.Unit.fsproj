@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="PreferencesTest.fs" />
     <Compile Include="ScenarioTest.fs" />
     <Compile Include="Expecto.fs" />
   </ItemGroup>
