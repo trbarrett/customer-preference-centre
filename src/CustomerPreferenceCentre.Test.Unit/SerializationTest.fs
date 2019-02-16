@@ -37,10 +37,10 @@ let tests =
 
         testList "RequestDtoToDomain" [
             testCase "should convert request json to customers for report" <| fun _ ->
-                """[{"name":"A","marketingPreference":"EveryDay"},""" +
-                """{"name":"B","marketingPreference":{"DayOfTheMonth":10}},""" +
-                """{"name":"C","marketingPreference":{"DayOfTheWeek":["Tuesday","Friday"]}},""" +
-                """{"name":"D","marketingPreference":"Never"}]"""
+                """[{"customerName":"A","marketingPreference":"EveryDay"},""" +
+                """{"customerName":"B","marketingPreference":{"DayOfTheMonth":10}},""" +
+                """{"customerName":"C","marketingPreference":{"DayOfTheWeek":["Tuesday","Friday"]}},""" +
+                """{"customerName":"D","marketingPreference":"Never"}]"""
                 |> JsonSerializer.deserialize
                 |> RequestDtoToDomain.convertReportRequest
                 |> Expect.equal "" (Set [ customerA; customerB; customerC; customerD])

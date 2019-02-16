@@ -58,7 +58,7 @@ module RequestDto =
         | DayOfTheWeek of string list
 
     type CustomerDto =
-        { name: string
+        { customerName: string
           marketingPreference:  MarketingPreferenceDto }
 
     type ReportRequestDto = CustomerDto list
@@ -85,7 +85,7 @@ module RequestDtoToDomain =
             |> MarketingPreference.DayOfTheWeek
 
     let convertCustomerDto (customer: CustomerDto) =
-        { Name = CustomerName customer.name
+        { Name = CustomerName customer.customerName
           MarketingPreference =
             convertMarketingPreference customer.marketingPreference }
 

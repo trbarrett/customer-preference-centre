@@ -2,7 +2,6 @@
 
 open Expecto
 open Expecto.Flip
-open System
 open FSharp.Data
 open CustomerPreferenceCentre.Domain
 open CustomerPreferenceCentre.Domain.RequestDto
@@ -15,9 +14,9 @@ let tests =
         testCase "should return abridged output" <| fun _ ->
             // For example, Customer A chooses 'Every day'. Customer B chooses 'On the 10th of the
             // month'. Customer C chooses ‘On Tuesday and Friday’.
-            let customerA = { name = "A"; marketingPreference = EveryDay }
-            let customerB = { name = "B"; marketingPreference = DayOfTheMonth 10 }
-            let customerC = { name = "C"; marketingPreference = DayOfTheWeek [ "Tuesday"; "Friday" ] }
+            let customerA = { customerName = "A"; marketingPreference = EveryDay }
+            let customerB = { customerName = "B"; marketingPreference = DayOfTheMonth 10 }
+            let customerC = { customerName = "C"; marketingPreference = DayOfTheWeek [ "Tuesday"; "Friday" ] }
 
             let json = [ customerA; customerB; customerC ] |> JsonSerializer.serialize
             let resultJson =

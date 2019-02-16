@@ -16,6 +16,8 @@ let getReportRequestFromJson req =
 
 let getNintyDayPreferenceReport dateStr =
     (fun (ctx: HttpContext) ->
+        // Note for reviewer: Once again I've skipped validation here for brevity,
+        // in a real-world system we would want to ensure the input is valid
         let reportDate = (DateTime.ParseExact(dateStr, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture))
         let reportRequest = getReportRequestFromJson ctx.request
         let part =
