@@ -7,6 +7,10 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "CustomerPreferenceCentre.Do
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CustomerPreferenceCentre.Test.Unit", "CustomerPreferenceCentre.Test.Unit\CustomerPreferenceCentre.Test.Unit.fsproj", "{234A4853-B52C-4BA2-90CC-F1F7F5DE8428}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CustomerPreferenceCentre.Suave.Core", "CustomerPreferenceCentre.Suave.Core\CustomerPreferenceCentre.Suave.Core.fsproj", "{EAC8448A-DB5B-456C-B2D8-304C8302FB6B}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CustomerPreferenceCentre.Suave.Server", "CustomerPreferenceCentre.Suave.Server\CustomerPreferenceCentre.Suave.Server.fsproj", "{00B46937-3FC5-4BF6-8C29-872EF9D6CDF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{234A4853-B52C-4BA2-90CC-F1F7F5DE8428}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{234A4853-B52C-4BA2-90CC-F1F7F5DE8428}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{234A4853-B52C-4BA2-90CC-F1F7F5DE8428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAC8448A-DB5B-456C-B2D8-304C8302FB6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC8448A-DB5B-456C-B2D8-304C8302FB6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC8448A-DB5B-456C-B2D8-304C8302FB6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC8448A-DB5B-456C-B2D8-304C8302FB6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00B46937-3FC5-4BF6-8C29-872EF9D6CDF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00B46937-3FC5-4BF6-8C29-872EF9D6CDF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00B46937-3FC5-4BF6-8C29-872EF9D6CDF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00B46937-3FC5-4BF6-8C29-872EF9D6CDF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

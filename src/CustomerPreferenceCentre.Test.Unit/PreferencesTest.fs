@@ -3,7 +3,8 @@
 open Expecto
 open Expecto.Flip
 open System
-open CustomerPreferenceCentre.Domain.Library
+open CustomerPreferenceCentre.Domain
+open CustomerPreferenceCentre.Domain.Report
 
 // Note for Reviewer:
 // Time permitting I would have liked to have used fscheck here

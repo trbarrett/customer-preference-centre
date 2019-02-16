@@ -3,11 +3,12 @@
 open Expecto
 open Expecto.Flip
 open System
-open CustomerPreferenceCentre.Domain.Library
+open CustomerPreferenceCentre.Domain
+open CustomerPreferenceCentre.Domain.Report
 
 [<Tests>]
 let tests =
-    testList "Scenario" (
+    testList "Scenario - nintyDayPreferenceReport" (
         // For example, Customer A chooses 'Every day'. Customer B chooses 'On the 10th of the
         // month'. Customer C chooses ‘On Tuesday and Friday’.
         let customerA = { Name = CustomerName "A"; MarketingPreference = EveryDay }
@@ -16,14 +17,14 @@ let tests =
             { Name = CustomerName "C"
               MarketingPreference = DayOfTheWeek (Set [ DayOfWeek.Tuesday; DayOfWeek.Friday ]) }
 
-        let result = customersToContactInNextNintyDays (DateTime(2018, 04, 01))
-                                                        (Set [customerA; customerB; customerC])
+        let result = nintyDayPreferenceReport (DateTime(2018, 04, 01))
+                                               (Set [customerA; customerB; customerC])
         [
         testCase "should return abridged output" <| fun _ ->
             // After providing this input the abridged output beginning in April would be:
             result
             |> List.ofSeq
-            |> List.take 14
+            |> List.take 14 // to match the Backend Role Technical Exercise
             |> Expect.equal "" [ (DateTime(2018, 04, 01)), Set [ customerA ]
                                  (DateTime(2018, 04, 02)), Set [ customerA ]
                                  (DateTime(2018, 04, 03)), Set [ customerA; customerC ]
