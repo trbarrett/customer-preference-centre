@@ -90,4 +90,4 @@ module RequestDtoToDomain =
             convertMarketingPreference customer.marketingPreference }
 
     let convertReportRequest (requestDto: ReportRequestDto) =
-        requestDto |> List.map convertCustomerDto
+        requestDto |> List.map convertCustomerDto |> Set

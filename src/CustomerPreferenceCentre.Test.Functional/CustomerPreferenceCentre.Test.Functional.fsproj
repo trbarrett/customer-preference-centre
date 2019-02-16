@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="TestServer.fs" />
+    <Compile Include="WebServerReportTest.fs" />
+    <Compile Include="Expecto.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Expecto" Version="8.8.0" />
+    <PackageReference Include="FSharp.Data" Version="3.0.0" />
+    <PackageReference Include="Microsoft.FSharpLu.Json" Version="0.10.29" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Suave" Version="2.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CustomerPreferenceCentre.Domain\CustomerPreferenceCentre.Domain.fsproj" />
+    <ProjectReference Include="..\CustomerPreferenceCentre.Suave.Core\CustomerPreferenceCentre.Suave.Core.fsproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.6.2" />
+  </ItemGroup>
+
+</Project>

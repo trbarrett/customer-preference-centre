@@ -36,13 +36,13 @@ let tests =
         ]
 
         testList "RequestDtoToDomain" [
-            testCase "should convert request to customers for report" <| fun _ ->
+            testCase "should convert request json to customers for report" <| fun _ ->
                 """[{"name":"A","marketingPreference":"EveryDay"},""" +
                 """{"name":"B","marketingPreference":{"DayOfTheMonth":10}},""" +
                 """{"name":"C","marketingPreference":{"DayOfTheWeek":["Tuesday","Friday"]}},""" +
                 """{"name":"D","marketingPreference":"Never"}]"""
                 |> JsonSerializer.deserialize
                 |> RequestDtoToDomain.convertReportRequest
-                |> Expect.equal "" [ customerA; customerB; customerC; customerD]
+                |> Expect.equal "" (Set [ customerA; customerB; customerC; customerD])
         ]
     ]
