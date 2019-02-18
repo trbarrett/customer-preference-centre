@@ -1,8 +1,8 @@
 # Customer Preference Centre
 #### Technical Exercise
 
-## Built:
-Developed in Visual Studio Community 2017 (Version 15.9.5) For Dotnet Core 2.1
+## Development Environment:
+Developed for Dotnet Core 2.1 in Visual Studio Community 2017 (Version 15.9.5)
 
 ## Design
 The guidence said that the "The input/output format is yours to decide.". I have chosen to use Json over HTTP for the input/output, with Suave specifically for the webserver. I had similar code I used for another project which made it fairly easy to do the same thing here.
@@ -10,7 +10,7 @@ The guidence said that the "The input/output format is yours to decide.". I have
 ## Running the application:
 Call "`>dotnet run`" from `src/CustomerPreferenceCentre.Suave.Server/` to start a webserver on port `8080`.
 
-You can then perform a POST request via postman or such with a date and customer preference details as the following example demonstrates:
+You can then perform a POST request via postman with a date and customer preference details as the following example demonstrates:
 ```
 POST /ninty-day-preference-report/2019-02-16 HTTP/1.1
 Host: 127.0.0.1:8080
